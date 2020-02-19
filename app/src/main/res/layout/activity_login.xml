@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/bg"
@@ -32,74 +32,82 @@
         app:layout_constraintGuide_percent="0.5"/>
 
     <TextView
-        android:id="@+id/text_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome Back"
-        android:textSize="24sp"
-        android:fontFamily="@font/futura_pt_demibold"
-        app:layout_constraintTop_toTopOf="@id/guideline"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/text_casp"
+        android:layout_width="188dp"
+        android:layout_height="66dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:textColor="#000000"
-        />
-
-    <TextView
-        android:id="@+id/text_under_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="at Largest Services Marketplace"
-        android:textSize="13sp"
         android:fontFamily="@font/futura_pt_demibold"
-        app:layout_constraintTop_toBottomOf="@id/text_welcome"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="20dp"
+        android:text="Continuing as Services Provider"
         android:textColor="#000000"
-        />
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
 
-    <TextView
-        android:id="@+id/text_enter"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter as a"
-        android:textSize="13sp"
+        android:text="Login"
         android:fontFamily="@font/futura_pt_demibold"
-        app:layout_constraintTop_toBottomOf="@id/text_under_welcome"
+        android:background="@drawable/btn_white_small"
+        android:textColor="#FF0000"
+        app:layout_constraintTop_toBottomOf="@id/text_casp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/button_register"
+        android:layout_marginRight="240dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:textColor="#000000"
         />
 
     <Button
-        android:id="@+id/button_user"
+        android:id="@+id/button_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="USER"
+        android:text="Register"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:background="@drawable/btn_red_medium"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/futura_pt_demibold"
-        android:background="@drawable/btn_red_large"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_enter"
-        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/text_casp"
+        app:layout_constraintLeft_toLeftOf="@id/button_login"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="180dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
         />
 
     <Button
-        android:id="@+id/button_service_provider"
+        android:id="@+id/cwg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SERVICE PROVIDER"
-        android:textColor="#F6EBBC"
+        android:text="Continue with Google"
         android:fontFamily="@font/futura_pt_demibold"
         android:background="@drawable/btn_white_large"
+        android:textColor="#FF0000"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_user"
+        app:layout_constraintTop_toBottomOf="@id/button_login"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="18dp"
+        android:drawableLeft="@drawable/google_logo"
+
+        />
+
+    <Button
+        android:id="@+id/cwf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue with facebook"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:background="@drawable/btn_blue_large"
+        android:textColor="#0055FF"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cwg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"
+        android:drawableLeft="@drawable/fb_logo"
+
         />
 
     <TextView
@@ -111,11 +119,8 @@
         android:fontFamily="@font/futura_pt_demibold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button_service_provider"
+        app:layout_constraintTop_toBottomOf="@id/cwf"
         android:layout_marginTop="30dp"
         />
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
